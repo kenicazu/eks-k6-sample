@@ -1,0 +1,19 @@
+*.js
+!jest.config.js
+!script.js
+*.d.ts
+node_modules
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+cdk.context.json
+
+# cdk8s manifests
+dist/
+build/
+
+.DS_Store
+
+# account config
+account-config.ts

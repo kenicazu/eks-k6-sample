@@ -1,0 +1,15 @@
+{
+    "agent": {
+        "region": "ap-northeast-1"
+    },
+    "metrics": {
+        "namespace": "k6",
+        "metrics_collected": {
+            "statsd": {
+                "service_address": ":8125",
+                "metrics_collection_interval": 5,
+                "metrics_aggregation_interval": 0
+            }
+        }
+    }
+}

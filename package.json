@@ -1,0 +1,33 @@
+{
+  "name": "eks-k6-sample",
+  "version": "0.1.0",
+  "bin": {
+    "eks-k6-sample": "bin/eks-k6-sample.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "cdk8s-build": "tsc --build && cdk8s synth",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.2",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "10.17.27",
+    "@types/prettier": "2.6.0",
+    "aws-cdk": "2.59.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@aws-cdk/lambda-layer-kubectl-v24": "^2.0.78",
+    "aws-cdk-lib": "2.59.0",
+    "cdk8s-cli": "^2.1.100",
+    "cdk8s-plus-24": "^2.3.18",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}

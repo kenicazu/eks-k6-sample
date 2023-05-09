@@ -1,0 +1,4 @@
+language: typescript
+app: node ./build/bin/eks-k6-sample.js
+imports:
+  - k8s

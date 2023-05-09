@@ -1,0 +1,78 @@
+{
+    "widgets": [
+        {
+            "height": 6,
+            "width": 12,
+            "y": 0,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "k6", "k6_vus", "metric_type", "gauge", { "region": "us-east-1" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "Virtual Users",
+                "stat": "Average",
+                "period": 1
+            }
+        },
+        {
+            "height": 6,
+            "width": 12,
+            "y": 6,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "k6", "k6_iteration_duration", "scenario", "default", "metric_type", "timing" ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "stat": "Average",
+                "period": 1,
+                "title": "Iteration duration"
+            }
+        },
+        {
+            "height": 6,
+            "width": 12,
+            "y": 0,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "k6", "k6_iterations", "scenario", "default", "metric_type", "counter" ],
+                    [ ".", "k6_iteration_duration", ".", ".", ".", "timing" ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "title": "Iterations",
+                "region": "us-east-1",
+                "stat": "Average",
+                "period": 1
+            }
+        },
+        {
+            "height": 6,
+            "width": 12,
+            "y": 6,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "k6", "k6_data_received", "scenario", "default", "metric_type", "counter" ],
+                    [ ".", "k6_data_sent", ".", ".", ".", "." ]
+                ],
+                "view": "timeSeries",
+                "stacked": true,
+                "title": "Data Transfer",
+                "region": "us-east-1",
+                "stat": "Sum",
+                "period": 1
+            }
+        }
+    ]
+}
